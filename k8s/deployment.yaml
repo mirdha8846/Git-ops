@@ -18,7 +18,7 @@ spec:
         - name: my-app
           image: pankajmirdha/testing:0985396a29210c20ae4af311dc3b478637896959
           ports:
-            - containerPort: 80
+            - containerPort: 3002
 ---
 apiVersion: v1
 kind: Service
@@ -29,6 +29,6 @@ spec:
     app: my-app
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 3002
+      targetPort: 3002
   type: ClusterIP
