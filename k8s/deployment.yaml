@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: pankajmirdha/testing:6da23e29e93708ddba81cdfef1218c3e8deee45b
+          image: pankajmirdha/testing:790c24c52cb25d42e3eee99cbde48d05093b4c48
           ports:
             - containerPort: 3002
 ---
