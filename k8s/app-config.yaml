@@ -4,7 +4,7 @@ metadata:
   name: myapp-gloable-config
 data:
   PROMETHEUS_URL: http://prometheus-svc:9090
-  APP_PORT: "3000"
-  GF_SECURITY_ADMIN_USER: admin
+  PORT: "3002"
+  
   
 

@@ -16,15 +16,23 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: pankajmirdha/testing:5b987f4633a2e5684aa916732568fa974a5d060b
+          image: pankajmirdha/testing:b31178f39edf4d73076ff32e80d3bf2b22f4ccf6
           ports:
             - containerPort: 3002
-          env:
-           - name: APP_PORT
-             valueFrom:
-               configMapKeyRef:
-                 name: myapp-gloable-config
-                 key: APP_PORT  
+          volumeMounts:
+          - name: env-file
+            readOnly: true
+            mountPath: "/app/"  
+          # env:
+          #  - name: PORT
+          #    valueFrom:
+          #      configMapKeyRef:
+          #        name: myapp-gloable-config
+          #        key: PORT 
+      volumes:
+      - name: env-file
+        secret:
+          secretName: myapp-secret            
 ---
 apiVersion: v1
 kind: Service

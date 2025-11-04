@@ -23,11 +23,15 @@ spec:
             - name: GF_SECURITY_ADMIN_USER
               valueFrom:
                 configMapKeyRef:
-                  name: myapp-gloable-config
+                  name: grafana-config
                   key: GF_SECURITY_ADMIN_USER
               # value: admin
             - name: GF_SECURITY_ADMIN_PASSWORD
-              value: admin
+              valueFrom:
+                secretKeyRef:
+                  name: grafana-secret
+                  key: admin_password
+              
 ---
 apiVersion: v1
 kind: Service
