@@ -19,6 +19,12 @@ spec:
           image: pankajmirdha/testing:0985396a29210c20ae4af311dc3b478637896959
           ports:
             - containerPort: 3002
+          env:
+           - name: APP_PORT
+             valueFrom:
+              configMapKeyRef:
+               name: myapp-gloable-config
+               key: APP_PORT  
 ---
 apiVersion: v1
 kind: Service
