@@ -5,7 +5,7 @@ metadata:
   labels:
     app: my-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -16,19 +16,13 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: pankajmirdha/testing:b31178f39edf4d73076ff32e80d3bf2b22f4ccf6
+          image: pankajmirdha/testing:b9dbb11ba6c40a45c6c0aba3991677ebca3d3722
           ports:
             - containerPort: 3002
           volumeMounts:
           - name: env-file
             readOnly: true
-            mountPath: "/app/"  
-          # env:
-          #  - name: PORT
-          #    valueFrom:
-          #      configMapKeyRef:
-          #        name: myapp-gloable-config
-          #        key: PORT 
+            mountPath: "/app/secret"  
       volumes:
       - name: env-file
         secret:
