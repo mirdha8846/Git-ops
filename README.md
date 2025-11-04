@@ -179,11 +179,15 @@ kubectl port-forward svc/prometheus-svc -n default 9090:9090
 
 ```
 git-ops-repo/
-├── k8s/                                  # Kubernetes manifests
-│   ├── deployment.yaml                   # Main application deployment (2 replicas)
-│   ├── grafana-deployment.yaml           # Grafana monitoring setup
-│   ├── prometheus-deployment.yaml        # Prometheus metrics collection
-│   └── prometheus-config.yaml            # Prometheus configuration
+├── 🎛️ k8s/                      # Kubernetes Manifests
+│   ├── deployment.yaml           # Your app with volume-mounted secrets
+│   ├── app-config.yaml           # Non-sensitive configs (Prometheus URL, PORT)
+│   ├── app-secret.yaml           # Secrets stored as volume mounts 🔒
+│   ├── prometheus-config.yaml    # Metrics scraping config
+│   ├── prometheus-deployment.yaml # Prometheus deployment
+│   ├── grafana-config.yaml       # Grafana admin user config
+│   ├── grafana-deployment.yaml   # Grafana with NodePort access
+│   └── gloable-secrets.yaml      # Grafana credentials
 │
 ├── Terraform/                            # Infrastructure as Code
 │   ├── provider.tf                       # Provider configurations
