@@ -1,0 +1,14 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: grafana-secret
+  namespace: default
+spec:
+  encryptedData:
+    admin_password: AgAqpQxzlobsvnVtK/RWatTXJ5+fZlRFCj59hFyA9jsjp1JFvoJTAJpy4h4diAK6I8QG1hQ5Iay/pDFMiS21BljYW3CO1i9+K12aqBWndDKBFUXtVjwPFeu3ArySONtHhZTLPNV2m6Myjotg1HhzDOa+J5L1azstSkHrfN9aUDV7xT13pb6Zf8w4mx2CGwmjxFNtWsWxj93D9xB3HGI6xbIgNgnrN20kzNZGgpNmy3ifny0FKJaL/NxebsKOGPnFyUP9LwsXvu2JUsyka2TuIZITEq6ijQbvV05JRJoU3sAa/C9tFhZKM3MC3dSPMIwpzrPWD2pHXEqAZe0MttSgc19jM+Egr1F/er1SlsW4LSrLsAZzzM59tHvI3pKXq07f/bRsV6TxN0WS6NRvXKUsTnV2ytdD+k6B8GEaXx0XpvA6aNg91NMdpkBOcjvwzohlz3eloh31WOGt7A+Fcp2WDpnw6tTJoWsOpfldoPumx7KJ2YjcRe61ueAAbzLB7wQ4WsTmGd9mdaLYzSo8T/v0+iHtzuKuP6wFlGZQg3fiLNlHOI0n3wVX2Ketx+UNLtTOYQ4Q/bFykkzuFJMT0vW8KHrRR4hUq+IYlo8ZNiwxCQzhltfm010Fqy57MAcLtLLEOJtVTMDTsvAfUrF1jNwsGrEhUuhel77JvVHnuERXJd9nDPctWdkoCXGQihxDEHpcwyg/4nwtrg==
+  template:
+    metadata:
+      name: grafana-secret
+      namespace: default
+    type: Opaque

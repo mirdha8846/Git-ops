@@ -1,0 +1,14 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: myapp-secret
+  namespace: default
+spec:
+  encryptedData:
+    .env: AgB1xGAwnMJzgcabvNwgCJx5bcxP1IRCqSeausLVizfs+x0lNCFF1j/39ePCOJV3sHxCz66Hwt12HGXc4tT4vb2leL0ia3tnSfXxY3cxoHaFL2q9DrBEidcFg5Xo/vktKABv7Rri+8d31J/2tCGyMKF1zWx4zsNRbEQ5FnTsrKKlUnPSAf3PncNOmLsKrTtjVYEaPXpGETx8WVegu5uTqP5HC+oDmQpYfXb2ZGs5hSPT/Hr5+awgw4+hnH2bSWGBWL+W2oZ1pdNjRChaSNIFpMpSoDR5vnBzWGJYYgmHmCiyR6AfZtN1qHbYcW/urUsR1hkBM6RaPV5568UfuQSZl1Was/TOmT9X9GxasqbJC0C8H91GqAnQw4sNmWUzp60N/K4ZVeu4Hr1fiNXOyIEYVSisRBwNuujJXTVbw3szLurQGoLzemTht/MeafNdgGfnPk2fXvjvfQiNWv/KPKO8wv2jIBK5ugccB4wXZjrqwq1pj8P/e9bNEyP+wLillvA6vknvXWjIshAPnlx4BYFRkxHBWBinFZW+1XTCNU7Uyn5NlNVQCl4IIt5JNsj945w4wkwlAdspTGtfch6CfohJCDp3uDjfQKHUyrpF/dPh8X0SF9TY5qh7fzA7Tim260QKx2G7EDb2oI56WKDccgONiJ03iyf7RnBThaxGcJf9lsRfFRDXAOQTr8TPoGHVi7ekowI+vBr4uG3sbgf6SDRJI+59Dv2+pIonxNRfpbzQ7J9d4J/7ZTUsmLnUyUqMFPNx
+  template:
+    metadata:
+      name: myapp-secret
+      namespace: default
+    type: Opaque
